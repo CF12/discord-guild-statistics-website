@@ -2,7 +2,7 @@ var webpack = require('webpack')
 var path = require('path')
 
 var BUILD_DIR = path.resolve(__dirname, 'build/')
-var APP_DIR = path.resolve(__dirname, 'src/')
+var APP_DIR = path.resolve(__dirname, 'src/app/')
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 

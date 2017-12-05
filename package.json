@@ -1,23 +1,27 @@
 {
-  "name": "react-base",
-  "version": "0.1.2",
-  "description": "My personal React, Babel, & Webpack base",
+  "name": "discord-guild-statistics-website",
+  "version": "0.1.0",
+  "description": "A visual website that displays the data from the discord guild statistics bot",
   "main": "index.js",
   "scripts": {
     "run-dev": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CF12/react-base.git"
+    "url": "git+https://github.com/CF12/discord-guild-statistics-website.git"
   },
   "author": "CF12",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CF12/react-base/issues"
+    "url": "https://github.com/CF12/discord-guild-statistics-website/issues"
   },
-  "homepage": "https://github.com/CF12/react-base#readme",
+  "homepage": "https://github.com/CF12/discord-guild-statistics-website#readme",
   "dependencies": {
+    "chart.js": "^2.7.1",
+    "ejs": "^2.5.7",
+    "lowdb": "^1.0.0",
     "react": "^15.6.1",
+    "react-chartjs-2": "^2.6.4",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {

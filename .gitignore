@@ -134,3 +134,7 @@ build
 
 # Ignore Eclipse Che
 .che
+
+# Data & Configs
+data
+config
