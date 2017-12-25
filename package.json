@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CF12/discord-guild-statistics-website#readme",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.1",
     "ejs": "^2.5.7",
     "lowdb": "^1.0.0",
