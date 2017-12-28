@@ -22,17 +22,9 @@ app.get('/', (req, res) => {
   res.render('index.html')
 })
 
-app.user('/api', router)
+app.use('/api', router)
 
-router.route('/users')
-.get((req, res) => {
-  let handler = require('./services/api/v1/state/playing/sum').handler(db)
-
-  res.json({
-    date: Date.now(),
-    users: handler.getUsers()
-  })
-})
+require('./services/api/v1/users/users')(db, router.route('/users'))
 
 app.listen(PORT)
 console.log('Listening on port: ' + PORT)
