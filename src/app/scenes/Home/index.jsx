@@ -31,9 +31,9 @@ export default class Home extends React.Component {
 
         <div className='body flex flex-column flex-center'>
           <div className='body__cards flex flex-row'>
-            <FetchedInfoCard path='api/statistics' type='messageCount' />
-            <FetchedInfoCard path='api/statistics' type='messageCount' />
-            <FetchedInfoCard path='api/statistics' type='messageCount' />
+            <FetchedInfoCard path='api/statistics' title='Total Messages' label='messages' type='messageCount' icon={require('react-icons/lib/fa/comments')} />
+            <FetchedInfoCard path='api/statistics' title='Voice Activity' label='hours' type='messageCount' icon={require('react-icons/lib/fa/headphones')} />
+            <FetchedInfoCard path='api/statistics' title='Some other title' label='hours' type='messageCount' icon={require('react-icons/lib/fa/microphone')} />
           </div>
 
           <div className='body__graph flex flex-row'>

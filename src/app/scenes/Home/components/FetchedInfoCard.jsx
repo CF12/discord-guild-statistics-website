@@ -6,8 +6,11 @@ export default class InfoCard extends React.Component {
   constructor (props) {
     super()
     this.state = {}
+    this.title = props.title
     this.path = props.path
+    this.label = props.label
     this.type = props.type
+    this.Icon = props.icon
   }
 
   componentWillMount () {
@@ -31,13 +34,15 @@ export default class InfoCard extends React.Component {
           (value) ? (
             <div>
               <Card className='flex flex-center flex-column' style={{ width: '300px', height: '200px' }} elevation={10}>
-                <Typography type='display1' align='center' color='primary'> Total Messages </Typography>
-                <Typography type='headline' align='center'> {value} </Typography>
+                { (this.Icon) ? <this.Icon size={60} /> : undefined }
+
+                <Typography type='display1' align='center' color='primary' gutterBottom> {this.title} </Typography>
+                <Typography type='subheading' align='center'> {value + ' ' + this.label} </Typography>
               </Card>
             </div>
           ) : (
             <div>
-              <CircularProgress style={{ color: '#FFF' }} />
+              <CircularProgress />
             </div>
           )
         }
