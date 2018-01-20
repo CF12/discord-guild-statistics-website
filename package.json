@@ -24,6 +24,7 @@
     "lodash": "^4.17.4",
     "lowdb": "^1.0.0",
     "material-ui": "^1.0.0-beta.27",
+    "nodemon": "^1.14.11",
     "react": "^15.6.1",
     "react-chartjs-2": "^2.6.4",
     "react-dom": "^15.6.1",

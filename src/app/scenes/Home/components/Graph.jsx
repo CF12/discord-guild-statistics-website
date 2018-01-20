@@ -31,10 +31,7 @@ export default class Graph extends React.Component {
       }
     }
 
-    if ('' in res) {
-      res['none'] = res['']
-      delete res['']
-    }
+    if ('' in res) delete res['']
 
     return res
   }
