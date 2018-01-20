@@ -24,7 +24,9 @@ app.get('/', (req, res) => {
 
 app.use('/api', router)
 
-require('./services/api/v1/users/users')(db, router.route('/users'))
+require('./services/api/users')(db, router.route('/users'))
+require('./services/api/users/user')(db, router.route('/users/:id'))
+require('./services/api/statistics')(db, router.route('/statistics'))
 
 app.listen(PORT)
 console.log('Listening on port: ' + PORT)

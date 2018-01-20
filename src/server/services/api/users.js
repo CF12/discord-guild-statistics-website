@@ -3,14 +3,10 @@ const _ = require('lodash')
 function handler (db, router) {
   router
   .get((req, res) => {
-    let users = {}
-    db.get('users')
-      .mapValues((e) => { users = _.assign(users, _.pick(e, 'user')) })
-    console.log(users)
+    let users = []
+    _.forOwn(db.get('users').value(), (e) => { users.push(e.user) })
 
     res.json({
-
-      timestamp: Date.now(),
       users: users
     })
   })
